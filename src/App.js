@@ -11,14 +11,17 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this.fetchReservations();
+    this.fetchReservations()
+      .then(reservations => this.setState({ reservations }))
+      .catch(err => Error('Something went wrong', console.log(err)))
   }
 
   fetchReservations = () => {
     const url = 'http://localhost:3001/api/v1/reservations'
     return fetch(url) 
       .then(response => response.json())
-      .then(result => console.log(result))
+      .catch(err => Error('Something went wrong', console.log(err)))
+
   }
 
   render() {
