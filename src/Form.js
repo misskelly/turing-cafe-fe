@@ -38,16 +38,16 @@ export default class Form extends Component {
             />
           <input 
             type='text'
-            placeholder='Name'
-            name='name'
-            value={name}
+            placeholder='Date (MM/DD)'
+            name='date'
+            value={date}
             onChange={this.handleChange}
             />
           <input 
             type='text'
-            placeholder='Name'
-            name='name'
-            value={name}
+            placeholder='Time'
+            name='time'
+            value={time}
             onChange={this.handleChange}
             />
           <input 
@@ -57,7 +57,9 @@ export default class Form extends Component {
             value={guests}
             onChange={this.handleChange}
             />
-          <button type='submit'>Make Reservation</button>
+          <button type='submit' className='submit-btn'>
+            Make Reservation
+          </button>
         </form>
       </div>
     )

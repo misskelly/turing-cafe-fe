@@ -10,13 +10,22 @@ class App extends Component {
     }
   }
 
+  componentDidMount = () => {
+    this.fetchReservations();
+  }
+
+  fetchReservations = () => {
+    const url = 'http://localhost:3001/api/v1/reservations'
+    return fetch(url) 
+      .then(response => response.json())
+      .then(result => console.log(result))
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
-
-        </div>
+        <Form />
         <div className='resy-container'>
           
         </div>
