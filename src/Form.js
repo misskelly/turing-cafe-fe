@@ -10,7 +10,11 @@ export default class Form extends Component {
        guests: ''
     }
   }
-  // handleChange
+  
+  handleChange = (e) => {
+    const { name, value } = e.target
+    this.setState({[name]: value})
+  }
   // handle submit
   
   render() {
