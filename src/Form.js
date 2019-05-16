@@ -32,7 +32,7 @@ export default class Form extends Component {
           // const { addRes } = this.props
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input 
             type='text'
             placeholder='Name'

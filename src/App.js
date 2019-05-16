@@ -38,9 +38,4 @@ class App extends Component {
 
 export default App;
 
-// create components to match comp
-// quick style form
-// quick style mock card
-// fetch call in componentDidMount to get existing reservations
-// 
-//
+
